@@ -1,0 +1,3 @@
+# Running all required service using docker compose
+
+`docker compose up -d`
