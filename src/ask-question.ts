@@ -17,7 +17,7 @@ const embedder: IEmbeddingFunction = {
   },
 };
 
-async function queryData(
+async function querySimilarContexts(
   client: ChromaClient,
   collectionName: string,
   search: string,
@@ -44,7 +44,7 @@ async function askAI(
   question: string
 ) {
   console.log(`thinking about....${question}`);
-  const data = await queryData(client, collectionName, question, 10);
+  const data = await querySimilarContexts(client, collectionName, question, 10);
   const context = data.documents[0];
 
   const contextText = context.join("\n----\n").replace(/\"/g, "").toString();
