@@ -1,0 +1,26 @@
+{
+  "name": "chromedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:generate-data": "nodemon src/generate-data.ts --watch",
+    "start:ask-ai": "nodemon src/ask-question.ts --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "axios": "^1.7.2",
+    "chromadb": "^1.8.1",
+    "chromadb-default-embed": "^2.13.2",
+    "faker": "^6.6.6",
+    "nodemon": "^3.1.4"
+  }
+}
